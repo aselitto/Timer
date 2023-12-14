@@ -1,0 +1,54 @@
+/* NavBar.css */
+.navbar {
+  position: fixed; /* Fixed position */
+  top: 0; /* Stick to the top */
+  left: 0; /* Stretch across the full width */
+  right: 0; /* Stretch across the full width */
+  z-index: 1000; /* Above other content */
+  background-color: #282c34;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-tabs {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-tabs .tab {
+  background: none;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.nav-tabs .tab.selected {
+  border-bottom: 2px solid white;
+}
+
+.sign-in-btn {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sign-in-btn:hover {
+  background-color: #357ae8;
+}

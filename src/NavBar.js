@@ -1,26 +1,33 @@
 // NavBar.js
+import React from "react";
+import styles from "./NavBar.module.css"; // Import the styles using the correct path
+
 const NavBar = ({ onSignIn, user, activeTab, setActiveTab }) => {
   return (
-    <nav className="navbar">
-      <div className="logo">Timer App</div>
-      <div className="nav-tabs">
+    <nav className={styles.navbar}>
+      {" "}
+      {/* Use styles.navbar instead of "navbar" */}
+      <div className={styles.logo}>Timer App</div>
+      <div className={styles.navTabs}>
         <button
-          className={`tab ${activeTab === "25thMinTimer" ? "selected" : ""}`}
+          className={`${activeTab === "25thMinTimer" ? styles.selected : ""}`}
           onClick={() => setActiveTab("25thMinTimer")}
         >
           25th Min Timer
         </button>
         <button
-          className={`tab ${activeTab === "timer" ? "selected" : ""}`}
+          className={`${activeTab === "timer" ? styles.selected : ""}`}
           onClick={() => setActiveTab("timer")}
         >
           Timer
         </button>
       </div>
       {user ? (
-        <div className="user-greeting">Hello, {user.displayName || "User"}</div>
+        <div className={styles.userGreeting}>
+          Hello, {user.displayName || "User"}
+        </div>
       ) : (
-        <button className="sign-in-btn" onClick={onSignIn}>
+        <button className={styles.signInBtn} onClick={onSignIn}>
           Sign in with Google
         </button>
       )}

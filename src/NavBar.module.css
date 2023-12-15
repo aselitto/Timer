@@ -11,7 +11,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 2rem;
+  padding: 0 20px;
+}
+
+.nav-item {
+  padding: 10px 15px; /* Add padding to each nav item */
+  background-color: #f0f0f0; /* Non-selected background color */
+  color: #333; /* Text color for non-selected nav items */
+  border: none; /* Remove borders if present */
+  outline: none; /* Remove outline if present */
 }
 
 .logo {
@@ -23,6 +31,11 @@
 .nav-tabs {
   display: flex;
   list-style-type: none;
+}
+
+.nav-item.selected {
+  background-color: #4caf50; /* Background color for selected nav item */
+  color: white; /* Text color for selected nav item */
 }
 
 .nav-tabs .tab {
@@ -51,4 +64,10 @@
 
 .sign-in-btn:hover {
   background-color: #357ae8;
+}
+
+.sign-in-button {
+  margin-left: auto;
+  background-color: blue; /* Or any color you want for the sign in button */
+  color: white; /* Text color for the sign in button */
 }
